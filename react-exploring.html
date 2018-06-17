@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>My First React app</title>
+  </head>
+  <body>
+
+    <div id="cart"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.1.0/umd/react.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.1.0/umd/react-dom.development.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
+
+    <script type="text/babel">
+       function shoppingList(items) {
+  return items.itemName + ' - ' + items.itemPrice;
+}
+
+const items = {
+  itemName: 'Broccoli',
+  itemPrice: '$' + 2 + '/lb',
+};
+
+const element = <h1>Your cart: {shoppingList(items)}!</h1>;
+
+ReactDOM.render(element, document.getElementById('cart'));
+      </script>
+  </body>
+</html>
